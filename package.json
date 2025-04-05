@@ -11,7 +11,9 @@
     "test:002": "tsc --strict --module nodenext --outDir dist test/002-types/002-types.test.ts && node --test dist/002-types.test.js",
     "test:002:solution": "tsc --strict --module nodenext --outDir dist solutions/002-types/002-types.test.ts && node --test dist/002-types.test.js",
     "test:003": "tsc --strict --module nodenext --outDir dist test/003-async/003-async.test.ts && node --test dist/003-async.test.js",
-    "test:003:solution": "tsc --strict --module nodenext --outDir dist solutions/003-async/003-async.test.ts && node --test dist/003-async.test.js"
+    "test:003:solution": "tsc --strict --module nodenext --outDir dist solutions/003-async/003-async.test.ts && node --test dist/003-async.test.js",
+    "test:004": "tsc --strict --module nodenext --outDir dist test/004-object-types/004-object-types.test.ts && node --test dist/004-object-types.test.js",
+    "test:004:solution": "tsc --strict --module nodenext --outDir dist solutions/004-object-types/004-object-types.test.ts && node --test dist/004-object-types.test.js"
   },
   "repository": {
     "type": "git",
