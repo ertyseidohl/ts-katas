@@ -1,0 +1,29 @@
+{
+  "name": "ts-katas",
+  "version": "1.0.0",
+  "description": "TS Katas",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && node --test dist/test/**/*.test.js",
+    "test:solutions": "tsc && node --test dist/solutions/**/*.test.js",
+
+    "test:001": "tsc --strict --outDir dist test/001-intro/001-intro.test.ts && node --test dist/001-intro.test.js",
+    "test:001:solution": "tsc --strict --outDir dist solutions/001-intro/001-intro.test.ts && node --test dist/001-intro.test.js",
+
+    "test:002": "tsc --strict --outDir dist test/002-types/002-types.test.ts && node --test dist/002-types.test.js",
+    "test:002:solution": "tsc --strict --outDir dist solutions/002-types/002-types.test.ts && node --test dist/002-types.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ertyseidohl/ts-katas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ertyseidohl/ts-katas/issues"
+  },
+  "homepage": "https://github.com/ertyseidohl/ts-katas#readme",
+  "devDependencies": {
+    "@types/node": "^22.14.0"
+  }
+}
