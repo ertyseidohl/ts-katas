@@ -22,22 +22,31 @@ function test_3(input: string): T {
   return null;
 }
 
-// Fix this type to be a union of all the possible values returned by test_4.
-type X = null;
+function test_4(x: string[] | string) {
+  return x;
+}
+
+// Fix this type to be a union of all the possible values returned by test_5.
+// You can solve this using `any`, but try to use a union type instead.
+type X = unknown;
 
 /* DO NOT EDIT BELOW THIS LINE */
 
-function test_4(input: any): X {
+function test_5(input: any): X {
   if (typeof input == "string") {
     return "";
-  } else if (typeof input == "number") {
+  }
+  if (typeof input == "number") {
+    if (isNaN(input)) {
+      return NaN;
+    }
     return 0;
-  } else if (typeof input == "boolean") {
+  }
+  if (typeof input == "boolean") {
     return false;
-  } else if (input === undefined) {
+  }
+  if (input === undefined) {
     return undefined;
-  } else if (isNaN(input)) {
-    return NaN;
   }
   return null;
 }
@@ -59,4 +68,18 @@ test("test_3 should return the boolean representing the input string, or null", 
   assert.equal(test_3("true"), true);
   assert.equal(test_3("false"), false);
   assert.equal(test_3("null"), null);
+});
+
+test("test_4 should return the input as a string or string array", async (t) => {
+  assert.equal(test_4("abc"), "abc");
+  assert.equal(test_4(["abc", "def"]), "abcdef");
+});
+
+test("test_5 should return falsy values or null", async (t) => {
+  assert.equal(test_5("abc"), "");
+  assert.equal(test_5(123), 0);
+  assert.equal(test_5(true), false);
+  assert.equal(test_5(undefined), undefined);
+  assert.equal(isNaN(test_5(NaN) as number), true);
+  assert.equal(test_5({}), null);
 });
