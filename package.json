@@ -19,7 +19,9 @@
     "test:006": "tsc --strict --module nodenext --outDir dist test/006-extension/006-extension.test.ts && node --test dist/006-extension.test.js",
     "test:006:solution": "tsc --strict --module nodenext --outDir dist solutions/006-extension/006-extension.test.ts && node --test dist/006-extension.test.js",
     "test:007": "tsc --strict --module nodenext --outDir dist test/007-literals/007-literals.test.ts && node --test dist/007-literals.test.js",
-    "test:007:solution": "tsc --strict --module nodenext --outDir dist solutions/007-literals/007-literals.test.ts && node --test dist/007-literals.test.js"
+    "test:007:solution": "tsc --strict --module nodenext --outDir dist solutions/007-literals/007-literals.test.ts && node --test dist/007-literals.test.js",
+    "test:008": "tsc --strict --module nodenext --outDir dist test/008-nullness/008-nullness.test.ts && node --test dist/008-nullness.test.js",
+    "test:008:solution": "tsc --strict --module nodenext --outDir dist solutions/008-nullness/008-nullness.test.ts && node --test dist/008-nullness.test.js"
   },
   "repository": {
     "type": "git",
