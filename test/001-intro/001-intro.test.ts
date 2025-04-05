@@ -4,11 +4,11 @@
 This is to test the setup of the system. This test should fail when running the
 tests with `npm run test`. Make sure that the test fails before continuing.
 
-Then, change the return value of `main` to any number. Run the tests again and
+Then, change the return value of `test_1` to any number. Run the tests again and
 this test should pass.
 */
 
-function main(): null | number {
+function test_1(): null | number {
   return null;
 }
 
@@ -17,6 +17,6 @@ function main(): null | number {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("main() returns any number", (t) => {
-  assert.equal(typeof main(), "number");
+test("test_1 returns any number", (t) => {
+  assert.equal(typeof test_1(), "number");
 });

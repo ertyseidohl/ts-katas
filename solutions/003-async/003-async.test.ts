@@ -5,7 +5,7 @@ Async functions should return a Promise. Fix the function below so the tests
 pass.
 */
 
-async function main(): Promise<number> {
+async function test_1(): Promise<number> {
   return 42;
 }
 
@@ -14,6 +14,6 @@ async function main(): Promise<number> {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("main() returns any number as a promise", async (t) => {
-  assert.equal(typeof (await main()), "number");
+test("test_1 returns any number as a promise", async (t) => {
+  assert.equal(typeof (await test_1()), "number");
 });

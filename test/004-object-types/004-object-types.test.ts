@@ -30,13 +30,13 @@ function test_2(): I {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("test_1() returns an object with a number, string, and boolean", async (t) => {
+test("test_1 returns an object with a number, string, and boolean", async (t) => {
   assert.equal(typeof test_1().n, "number");
   assert.equal(typeof test_1().s, "string");
   assert.equal(typeof test_1().b, "boolean");
 });
 
-test("test_2() returns an object matching the interface I", async (t) => {
+test("test_2 returns an object matching the interface I", async (t) => {
   assert.equal(Object.keys(test_2()).sort(), ["a", "b"]);
   assert.equal(typeof test_2().a, "number");
   assert.equal(typeof test_2().b, "number");
