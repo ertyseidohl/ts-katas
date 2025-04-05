@@ -28,10 +28,10 @@ function test_2(input: T): U {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("test_1 copies the value in input.a in an object as properties a and b", async (t) => {
+test("test_1 copies the value in input.a in an object as properties a and b", async () => {
   assert.deepStrictEqual(test_1({ a: 42 }), { a: 42, b: 42 });
 });
 
-test("test_2 copies the value in input.x in an object as properties x and y", async (t) => {
+test("test_2 copies the value in input.x in an object as properties x and y", async () => {
   assert.deepStrictEqual(test_2({ x: 42 }), { x: 42, y: 42 });
 });

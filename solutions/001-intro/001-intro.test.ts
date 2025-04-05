@@ -17,6 +17,6 @@ export function test_1(): null | number {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("test_1 returns any number", (t) => {
+test("test_1 returns any number", () => {
   assert.equal(typeof test_1(), "number");
 });

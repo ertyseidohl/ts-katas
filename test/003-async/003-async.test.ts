@@ -14,6 +14,6 @@ async function test_1(): number {
 import { test } from "node:test";
 import { strict as assert } from "node:assert";
 
-test("test_1 returns any number as a promise", async (t) => {
+test("test_1 returns any number as a promise", async () => {
   assert.equal(typeof (await test_1()), "number");
 });
